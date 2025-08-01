@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Alfred Dashboard</title>
+</head>
+<body>
+  <h2>Welcome, Alfredo Kalonzo Munuve!</h2>
+  <button onclick="logout()">Logout</button>
+
+  <script>
+    if (!localStorage.getItem("token")) {
+      window.location.href = "index.html";
+    }
+
+    function logout() {
+      localStorage.removeItem("token");
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>
